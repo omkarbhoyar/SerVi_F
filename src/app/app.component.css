@@ -1,0 +1,67 @@
+/* General Styling for the Header */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #B59F78;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Header Title Styling */
+.main-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation Links Container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Link Buttons Styling */
+.nav-links a {
+  font-size: 16px;
+  font-weight: 500;
+  color: white !important;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: #a02525;
+  transform: scale(1.05);
+}
+
+/* Active Link Styling */
+.nav-links .active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,65 @@
+/* Table styling */
+nz-table {
+    border-collapse: collapse;
+    width: 100%; /* Make table responsive */
+}
+
+thead {
+    background-color: #003973; /* Dark blue header */
+    color: #ffffff; /* White text */
+}
+
+.header {
+    padding: 15px;
+    font-weight: bolder;
+    text-align: left; /* Align text to the left */
+}
+
+tbody tr {
+    background-color: #f9f9f9; /* Light background color for rows */
+    transition: background-color 0.3s; /* Liquid background transition */
+}
+
+tbody tr:hover {
+    background-color: #e6f7ff; /* Light blue on row hover */
+}
+
+td {
+    padding: 15px; /* Space inside table cells */
+    font-weight: 600;
+    border-bottom: 1px solid #dddddd; /* Light border for better separation */
+}
+
+.service-name {
+    color: #003973; /* Match service name color to header */
+}
+
+.status {
+    color: #ff4d4f; /* Use a bold red color for status */
+}
+
+/* Button styling */
+.review-button {
+    margin-left: 10px;
+    margin-top: 15px;
+    background-color: #28a745; /* Green background for the button */
+    color: white; /* White text on button */
+    border: none;
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.review-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nz-table {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    td {
+        padding: 10px; /* Reduced cell padding for smaller screens */
+    }
+}

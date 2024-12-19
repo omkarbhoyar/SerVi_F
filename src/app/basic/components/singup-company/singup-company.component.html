@@ -1,0 +1,64 @@
+Company
+<div class="bg">
+    <div class="parent">
+      <div class="child">
+        <h1 class="form-title">Company SignUp</h1>
+      </div>
+      <form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        
+        <div class="form-item">
+          <label for="email">Email</label>
+          <input id="email" type="email" formControlName="email" placeholder="Email" />
+          <div *ngIf="validateForm.get('email')?.invalid && validateForm.get('email')?.touched" class="error">
+            <p>Email is required and must be valid.</p>
+          </div>
+        </div>
+  
+        <div class="form-item">
+          <label for="password">Password</label>
+          <input id="password" type="password" formControlName="password" placeholder="Password" />
+          <div *ngIf="validateForm.get('password')?.invalid && validateForm.get('password')?.touched" class="error">
+            <p>Password is required.</p>
+          </div>
+        </div>
+  
+        <div class="form-item">
+          <label for="checkPassword">Confirm Password</label>
+          <input id="checkPassword" type="password" formControlName="checkPassword" placeholder="Confirm Password" />
+          <div *ngIf="validateForm.hasError('passwordMismatch') && validateForm.get('checkPassword')?.touched" class="error">
+            <p>Passwords must match.</p>
+          </div>
+        </div>
+  
+        <div class="form-item">
+          <label for="firstname">First Name</label>
+          <input id="firstname" formControlName="firstname" placeholder="First Name" />
+          <div *ngIf="validateForm.get('firstname')?.invalid && validateForm.get('firstname')?.touched" class="error">
+            <p>First name is required.</p>
+          </div>
+        </div>
+  <!--  
+        <div class="form-item">
+          <label for="lastname">Last Name</label>
+          <input id="lastname" formControlName="lastname" placeholder="Last Name" />
+          <div *ngIf="validateForm.get('lastname')?.invalid && validateForm.get('lastname')?.touched" class="error">
+            <p>Last name is required.</p>
+          </div>
+        </div>  -->
+  
+        <div class="form-item">
+          <label for="phone">Phone</label>
+          <input id="phone" formControlName="phone" placeholder="Phone" />
+        </div>
+  
+        <button type="submit" [disabled]="validateForm.invalid">Register</button>
+  
+        <div *ngIf="validateForm.invalid && validateForm.touched" class="error">
+          <p>Please fill in all required fields.</p>
+        </div>
+  
+        or <a routerLink="/login">Login now!</a>
+      </form>
+    </div>
+  </div>
+  

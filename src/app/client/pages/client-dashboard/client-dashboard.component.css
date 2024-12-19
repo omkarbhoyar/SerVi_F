@@ -1,0 +1,96 @@
+/* General Styles */
+.bg {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .child {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .child:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Ad Container */
+  .ad-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .ad-image {
+    text-align: center;
+  }
+  
+  .ad-image img {
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s ease;
+  }
+  
+  .ad-image img:hover {
+    transform: scale(1.05);
+    border-color: #108ee9;
+  }
+  
+  .ad-details {
+    padding-left: 15px;
+  }
+  
+  .ad-details h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #108ee9;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .ad-details h2:hover {
+    color: #005bb5;
+  }
+  
+  .price-description {
+    margin: 10px 0;
+    color: #666;
+  }
+  
+  .price-description h5 {
+    margin: 5px 0;
+  }
+  
+  .price-description b {
+    color: #333;
+  }
+  
+  /* Action Buttons */
+  .action-buttons button {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .action-buttons button[nzType="primary"] {
+    background-color: #108ee9;
+    border-color: #108ee9;
+  }
+  
+  .action-buttons button[nzType="primary"]:hover {
+    background-color: #005bb5;
+    border-color: #005bb5;
+  }
+  
+  /* No Ads Message */
+  .no-ads {
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+    margin-top: 20px;
+  }
+  

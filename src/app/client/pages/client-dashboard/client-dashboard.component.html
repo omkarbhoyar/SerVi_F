@@ -1,0 +1,71 @@
+
+<form
+  nz-form
+  [formGroup]="valitateForm"
+  (ngSubmit)="searchAdByName()"
+  style="margin: 20px auto; text-align: center;"
+>
+  <input
+    nz-input
+    placeholder="Enter service to search"
+    nzSize="large"
+    style="width: 20%;"
+    formControlName="service"
+  />
+  <button
+    nz-button
+    nzSize="large"
+    nzType="primary"
+    style="margin-left: 15px;"
+    [disabled]="valitateForm.invalid"
+  >
+    Search
+  </button>
+</form>
+
+
+
+
+<div class="bg" *ngIf="ads && ads.length > 0; else noAds">
+    <div class="child" *ngFor="let ad of ads">
+      <div nz-row class="ad-container">
+        <!-- Image Section -->
+        <div nz-col nzSpan="8" class="ad-image">
+          <img class="profile" [src]="ad?.returnedImg ? updateImg(ad.returnedImg) : 'assets/placeholder.jpg'" 
+               alt="Ad Image" 
+               style="height: 130px; width: 200px; border-radius: 10px;" />
+        </div>
+  
+        <!-- Ad Details Section -->
+        <div nz-col nzSpan="16" class="ad-details">
+          <h2 style="cursor: pointer; color: #108ee9;">
+            {{ ad?.serviceName || 'No Service Name Available' }}
+          </h2>
+  
+          <mat-divider></mat-divider>
+  
+          <div class="price-description">
+            <h5>
+              Price: <b>{{ ad?.price || 'Not Available' }}</b>
+            </h5>
+            <h5>
+              Description: <b>{{ ad?.description || 'No Description Available' }}</b>
+            </h5>
+          </div>
+  
+          <mat-divider></mat-divider>
+  
+          <!-- Action Buttons -->
+          <div class="action-buttons">
+            <button nzSize="small" nz-button nzType="primary" [routerLink]="'/client/ad/' + ad.id">View</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #noAds>
+    <p>No ads available.</p>
+  </ng-template>
+  

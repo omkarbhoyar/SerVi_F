@@ -1,0 +1,41 @@
+.bg {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.ad-details-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ad-detail {
+  display: flex;
+}
+
+.profile {
+  height: 130px;
+  width: 200px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.ad-detail h2 {
+  cursor: pointer;
+  color: #108ee9;
+  margin-bottom: 5px;
+}
+
+.book-service {
+  /* Add your styling for the "Book Service" button here */
+  background-color: #108ee9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}

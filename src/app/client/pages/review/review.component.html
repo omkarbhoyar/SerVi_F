@@ -1,0 +1,10 @@
+<div class="container">
+  <h2 class="header">Post Review</h2>
+  <form [formGroup]="validateForm" (ngSubmit)="giveReview()">
+    <div class="form-group">
+      <textarea nz-input placeholder="Write a Review" formControlName="review" rows="5"></textarea>
+    </div>
+   
+    <button nz-button type="submit" nzType="primary">Post Review</button>
+  </form>
+</div>

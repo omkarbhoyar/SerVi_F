@@ -1,0 +1,68 @@
+<div class="create-ad-container">
+    <div class="parent">
+      <div class="header">
+        <h2>Update Ad</h2>
+      </div>
+      <form nz-form [formGroup]="validateForm" (ngSubmit)="updateAd()">
+        <!-- Profile Image Upload Section -->
+        <div class="file-upload-container">
+          <label class="file-upload-label">
+            <span>Select a File</span>
+            <input
+              type="file"
+              nz-button
+              nz-Type="primary"
+              accept="image/x-png,image/gif,image/jpeg"
+              (change)="onFileSelected($event)"
+            />
+          </label>
+  
+          <div *ngIf="imagePreview" class="image-preview">
+            <div class="circle-image">
+              <img [src]="imagePreview" alt="Existing Image" class="preview-image" />
+            </div>
+          </div>
+  
+          <div *ngIf="existingImage" class="image-preview">
+            <div class="circle-image">
+              <img [src]="existingImage" alt="Existing Image" class="preview-image" />
+            </div>
+          </div>
+        </div>
+  
+        <!-- Service Name Input -->
+        <div class="form-fields">
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="This Input Is Required!">
+              <input nz-input placeholder="Service Name" formControlName="serviceName" />
+            </nz-form-control>
+          </nz-form-item>
+  
+          <!-- Price Input -->
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="This Input Is Required!">
+              <input nz-input placeholder="Price" formControlName="price" type="number" />
+            </nz-form-control>
+          </nz-form-item>
+  
+          <!-- Description Input -->
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="This Input Is Required!">
+              <textarea
+                rows="3"
+                nz-input
+                placeholder="Description"
+                formControlName="description"
+              ></textarea>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+  
+        <!-- Submit Button -->
+        <div class="form-actions">
+          <button nz-button class="login-form-button" [nzType]="'primary'">Update Ad</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

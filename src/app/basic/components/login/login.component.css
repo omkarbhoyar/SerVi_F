@@ -1,0 +1,94 @@
+/* login.component.css */
+
+/* Background styling */
+.bg {
+  background: #D8DBBD ;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+  
+  /* Parent container styling */
+  .parent {
+    width: 400px;
+    background: #FAF6E3; /* White background */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 20px 30px;
+    text-align: center;
+  }
+  
+  /* Child container styling */
+  .child {
+    margin: 0 auto;
+  }
+  
+  /* Image container styling */
+  .imgDiv h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form styling */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .login-form .login-form-button {
+    width: 100%;
+    background-color: #B59F78;
+    color: white;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .login-form .login-form-button:hover {
+    background-color: #744f11;
+  }
+  
+
+  .login-form a {
+    color: #B59F78;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-form a:hover {
+    text-decoration: underline;
+    color: #744f11;
+  }
+  
+  /* Input field styling */
+  .nz-input-group input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .nz-input-group input:focus {
+    outline: none;
+    border-color: #2575fc;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+  }
+  
+  /* Form item error messages */
+  .nz-form-item {
+    margin-bottom: 10px;
+  }
+  
+  .nz-error-tip {
+    color: red;
+    font-size: 12px;
+  }
+  

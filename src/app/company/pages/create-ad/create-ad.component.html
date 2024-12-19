@@ -1,0 +1,67 @@
+<div class="create-ad-container" style="background-color: #f8f8f8; padding: 20px;">
+    <div class="parent">
+      <div class="header">
+        <h2>Create Ad</h2>
+      </div>
+      <form nz-form [formGroup]="validateForm" (ngSubmit)="postAd()">
+        <!-- Profile Image Upload Section -->
+        <div class="profile-badge">
+          <label for="upload_profile_image" class="upload-label">
+            <img
+              class="profile"
+              [src]="imagePreview || 'https://via.placeholder.com/100'"
+              alt="Profile Image"
+            />
+          </label>
+          <input
+            type="file"
+            id="upload_profile_image"
+            (change)="onFileSelected($event)"
+            accept="image/x-png,image/gif,image/jpeg"
+          />
+        </div>
+  
+        <!-- Service Name Input -->
+        <div nz-row class="form-fields">
+          <div nz-col nzSpan="24">
+            <nz-form-item>
+              <nz-form-control nzHasFeedback nzErrorTip="This Input Is Required!">
+                <input nz-input placeholder="Service Name" formControlName="serviceName" />
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+  
+          <!-- Price Input -->
+          <div nz-col nzSpan="24">
+            <nz-form-item>
+              <nz-form-control nzHasFeedback nzErrorTip="This Input Is Required!">
+                <input nz-input placeholder="Price" formControlName="price" type="number" />
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+  
+          <!-- Description Input -->
+          <div nz-col nzSpan="24">
+            <nz-form-item>
+              <nz-form-control nzHasFeedback nzErrorTip="This Input Is Required!">
+                <textarea
+                  rows="3"
+                  nz-input
+                  placeholder="Description"
+                  formControlName="description"
+                ></textarea>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+        </div>
+  
+        <!-- Submit Button -->
+        <div class="form-actions">
+          <button nz-button class="login-form-button" [nzType]="'primary'">
+            Add
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
